@@ -1,0 +1,32 @@
+@import "/styles/variables.scss";
+
+.download {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  z-index: 1;
+  text-align: end;
+  &Wrapper {
+    margin: 0 64px 40px 0;
+  }
+  &Btn {
+    display: inline-block;
+    margin-bottom: 4px;
+    background: #5865f2;
+    box-shadow: 0px 4px 50px 18px rgb(88 101 242 / 40%);
+    border-radius: 24px;
+    border-radius: 50%;
+    height: 64px;
+  }
+  p {
+    @include font-medium-14;
+    color: $color-white-0;
+    margin-bottom: 10px;
+    margin-right: 7px;
+  }
+  @media (min-width: 769px) {
+    img {
+      max-width: 250px !important;
+    }
+  }
+}

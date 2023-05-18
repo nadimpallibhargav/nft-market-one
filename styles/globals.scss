@@ -1,0 +1,148 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
+@import "./variables.scss";
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+  font-size: 10px;
+  background-color: $color-black-0;
+  color: $color-white-0;
+  -webkit-font-smoothing: antialiased;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+main {
+  padding-top: 149px;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+section {
+  padding: 40px 0;
+}
+
+.container {
+  width: 100%;
+  padding: 0 16px;
+  margin: auto;
+  @media (min-width:1472px){
+    max-width: 1440px;
+  }
+}
+
+.commonBtn {
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 150%;
+  text-align: center;
+  color: $color-white-0;
+  padding: 8px 8px;
+  border-radius: 16px;
+  display: inline-block;
+  div {
+    display: flex;
+    width: 70px;
+    gap: 4px;
+    white-space: nowrap;
+    justify-content: center;
+  }
+}
+
+.clanSlider {
+  .slick-dots li.slick-active,
+  .slick-dots li.slick-active button {
+    width: 24px !important;
+    height: 4px !important;
+  }
+  .slick-dots li.slick-active button {
+    background: $color-violet-2 !important;
+  }
+  .slick-dots li {
+    width: 12px !important;
+  }
+  .slick-dots li button {
+    height: 4px !important;
+    width: 4px !important;
+  }
+}
+
+.slick-dots li button:before {
+  content: none !important;
+}
+.slick-dots li button {
+  width: 8px !important;
+  height: 8px !important;
+  background: $color-black-3 !important;
+  padding: 0 !important;
+  border-radius: 8px;
+  display: inline !important;
+  margin-right: 8px !important;
+}
+.slick-dots li.slick-active button {
+  background: $color-white-0 !important;
+}
+.slick-dots li {
+  margin: 0 !important;
+}
+.slick-dots li.slick-active,
+.slick-dots li.slick-active button {
+  width: 32px !important;
+  height: 8px !important;
+  display: inline !important;
+}
+.slick-dots {
+  bottom: -32px;
+}
+.main,
+.clan {
+  padding-top: 0;
+}
+
+.clan {
+  background: linear-gradient(
+      270deg,
+      rgba(151, 42, 204, 0.2) 0%,
+      rgba(0, 0, 0, 0.2) 100%
+    ),
+    #010101;
+}
+
+.gradientText {
+  background: linear-gradient(270deg, #c86af5 0%, #3b64be 100%), #ffffff;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+}
+
+.badge {
+  position: absolute;
+  top: 5%;
+  left: -20%;
+  padding: 5px;
+  transform: rotate(-45deg);
+  background: $color-violet-0;
+  width: 208px;
+  text-align: center;
+  color: $color-white-0;
+  @include font-regular-12;
+  color: $color-white-0;
+  z-index: 1;
+}
+
+@media (max-width: 425px) {
+  .clanCaraousel .slick-slide {
+    width: 150px !important;
+  }
+}

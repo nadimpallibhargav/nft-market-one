@@ -1,0 +1,42 @@
+@import "/styles/variables.scss";
+
+.tournaments {
+  justify-content: space-between;
+  &Money {
+    padding: 16px 16px 0 0;
+    display: flex;
+    justify-content:flex-start ;
+    gap: 10px;
+    align-items: center;
+  }
+  &VideoWrapper {
+    flex-grow: 1;
+    iframe {
+      height: -webkit-fill-available;
+    }
+  }
+  &CardImg{
+    @media (min-width:1025px){
+      min-height: 230px !important;
+    }
+    span{
+      height: 100% !important;
+    }
+  }
+  &Content{
+    @media (min-width: 541px) and (max-width: 1024px) {
+      gap: 40px 20px;
+    }
+  }
+  @media (min-width: 541px) and (max-width: 770px) {
+   &Title{
+     min-height: 94px;
+   } 
+  }
+  @media (min-width:1025px){
+    &CardExtra{
+      flex-grow: 1;
+      width: 32%;
+    }
+  }
+}

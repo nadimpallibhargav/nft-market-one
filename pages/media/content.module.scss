@@ -1,0 +1,124 @@
+@import '/styles/variables.scss';
+
+.featured {
+    h2 {
+        @include font-medium-20;
+        color: $color-white-0;
+    }
+    &Heading {
+        margin-bottom: 23px;
+    }
+    &Video {
+        padding: 16px;
+        background: $color-black-4;
+        box-shadow: 0px 4px 60px 18px rgba(171, 4, 216, 0.2);
+        border-radius: 24px;
+        cursor: pointer;
+        span {
+            width: 100% !important;            
+        }
+        img {
+            border-radius: 16px;
+            object-fit: cover;
+        }
+        video {
+            max-width: 100%;
+            border-radius: 16px;
+        }        
+    }
+    &VideosWrapper {
+        display: flex;
+        justify-content: space-between;
+        gap: 24px 16px;
+        flex-wrap: wrap;     
+        .featuredVideo {
+            width: 47%;
+            padding: 8px 8px 16px;
+            p {
+                margin: 8px 0 4px;
+                font-size: 1rem;
+            }
+            h3 {
+                font-size: 1.4rem;
+                color: $color-white-0;
+            }
+        }
+    }
+    p {
+        margin-top: 16px;
+        @include font-medium-12;
+        color: $color-white-1;
+        margin-bottom: 8px;
+    }
+    h3 {
+        @include font-medium-20;
+        color: $color-white-1;
+    } 
+    &Content {
+        padding-top: 0;
+    }
+    &Type {
+        @include flex-center;
+        justify-content: space-between;
+        a {
+            background: #262626;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 15px;
+            font-size: 14px;
+        }
+    }  
+    &VideoDetail {
+        background: none; 
+        p {
+            margin: 24px 0 10px;
+        }
+    }
+    @media (min-width: 1024px) {
+        &VideoDetail {
+            max-width: 840px;
+            margin: auto;
+        }   
+        &VideoDesktop{
+            iframe{
+                height: 100%;
+            }
+        }
+    }
+    @media (min-width: 768px) {
+        .featuredVideoParent{
+            margin: auto;
+        }
+        &Video{
+            max-width: 820px;
+            // margin-left: auto;
+            // margin-right: auto;
+        }
+        &Heading {
+            margin: 0 auto 23px;
+            max-width: 820px;
+        }
+        &VideoImage {
+            height: 300px;
+            span {
+                height: 100% !important;
+            }
+        }
+    }
+}
+
+.featuredVideosWrapper {
+    @media (min-width: 1024px) {
+        .featuredVideo {
+            width: 32%;
+        }
+        .featuredVideoImg {   
+            height: 200px;
+            span {
+                height: 100% !important;
+            }
+        }
+
+    }   
+}

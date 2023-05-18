@@ -1,0 +1,197 @@
+@import "/styles/variables.scss";
+
+.games {
+  padding: 24px 0 32px;
+  &Heading {
+    @include flex-center;
+    justify-content: space-between;
+    padding-bottom: 32px;
+    h2 {
+      @include font-medium-16;
+    }
+  }
+  .dropDown {
+    position: relative;
+    min-width: 130px;
+    p {
+      padding: 8px 16px;
+      @include font-medium-14;
+      @include flex-center;
+      gap: 10px;
+      background: $color-black-1;
+      border-radius: 24px;
+      width: fit-content;
+      cursor: pointer;
+      justify-content: space-between;
+      width: 100%;
+      text-transform: capitalize;
+    }
+  }
+  &Filter {
+    position: absolute;
+    padding: 16px;
+    top: 38px;
+    left: 0;
+    width: 100%;
+    list-style: none;
+    z-index: 9;
+    background: #262626;
+    border-radius: 24px;
+    li {
+      padding: 4px 8px;
+      font-size: 14px;
+      cursor: pointer;
+      border-radius: 16px;
+      &:not(:last-child) {
+        margin-bottom: 16px;
+      }
+    }
+  }
+  &Content {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+  }
+  .videoWrapper {
+    position: relative;
+    flex-grow: 1;
+    iframe {
+      height: 200px;
+    }
+    .muteIcon {
+      position: absolute;
+      top: 8px;
+      right: 8px;
+      cursor: pointer;
+    }
+  }
+  iframe {
+    width: 100%;
+    height: -webkit-fill-available;
+  }
+  .videoPlayer {
+    border-radius: 16px;
+    max-width: 100%;
+  }
+  .mode {
+    position: absolute;
+    top: 8px;
+    left: 8px;
+    p {
+      @include flex-center;
+      gap: 4px;
+      padding: 8px;
+      background: $color-black-0;
+      border-radius: 24px;
+      width: fit-content;
+      &.live {
+        color: $color-green-0;
+      }
+      &.upcoming {
+        color: $color-violet-0;
+      }
+    }
+  }
+  &Card {
+    padding: 16px;
+    background: $color-black-2;
+    box-shadow: 0px 4px 60px 8px rgba(171, 4, 216, 0.2);
+    border-radius: 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    justify-content: space-between;
+  }
+  &Details {
+    @include flex-center;
+    justify-content: space-between;
+  }
+  &Title {
+    @include flex-center;
+    gap: 16px;
+    img {
+      max-width: 56px !important;
+    }
+    h4 {
+      @include font-medium-20($line-height: 120%);
+      padding-bottom: 8px;
+    }
+    p {
+      @include font-regular-14($line-height: 140%);
+      color: $color-white-1;
+    }
+    & + p {
+      @include font-medium-14;
+      padding: 8px 16px;
+      background: $primary-gradient;
+      border-radius: 24px;
+      width: fit-content;
+      cursor: pointer;
+      display: flex;
+      gap: 4px;
+      white-space: nowrap;
+    }
+  }
+  &Tags {
+    @include flex-center;
+    gap: 12px;
+    flex-wrap: wrap;
+    p {
+      @include font-regular-10;
+      color: $color-white-3;
+      padding: 4px 8px;
+      background-color: $color-black-1;
+      border-radius: 16px;
+    }
+  }
+  @media (min-width: 569px) {
+    &Content {
+      flex-direction: row;
+      flex-wrap: wrap;
+      gap: 20px;
+      justify-content: space-between;
+    }
+    &Card {
+      width: 48%;
+    }
+  }
+  @media (min-width:500px) and (max-width:768px){
+    &DetailsTab{
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+  }
+  @media (min-width: 1025px) {
+    .videoWrapper{
+      iframe{
+        height: 230px;
+      }
+    }
+    &Content {
+      gap: 10px;
+      justify-content: start;
+    }
+    &Card {
+      width: 32%;
+      flex-grow: 1;
+    }
+    .gamesCardGrow{
+      flex-grow: 1;
+    }
+    &CardExtra{
+      flex-grow: 1;
+      width: 32%;
+    }
+  }
+  @media (max-width: 768px) {
+    &Title {
+      & + p {
+        @include font-regular-12;
+        flex-shrink: 0;
+      }
+    }
+    &Card {
+      padding: 16px;
+    }
+  }
+}

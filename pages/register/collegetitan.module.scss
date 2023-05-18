@@ -1,0 +1,11 @@
+@import '/styles/variables.scss';
+
+.college {
+    padding: 10px 0;
+    min-height: 100vh;
+    iframe {
+        width: 100%;
+        min-height: 100vh;
+        border-radius: 4px;
+    }
+}

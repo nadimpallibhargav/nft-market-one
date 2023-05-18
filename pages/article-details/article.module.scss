@@ -1,0 +1,140 @@
+@import "/styles/variables.scss";
+
+.article {
+  padding: 88px 0 0;
+  .marginTable_wrapper {
+    margin-top: 8px;
+    .image_Table {
+      border-radius: 0;
+    }
+    .marginTable {
+      margin-top: -9px !important;
+    }
+  }
+
+  img {
+    border-radius: 16px;
+  }
+  p {
+    @include font-medium-16;
+    color: $color-white-1;
+    &:not(:last-child) {
+      margin-bottom: 16px;
+    }
+  }
+  &Heading {
+    p {
+      @include font-medium-12;
+      color: #dbdbdb;
+      margin: 24px 0 8px;
+    }
+    h3 {
+      @include font-bold-24;
+      color: $color-white-0;
+      margin-bottom: 16px;
+    }
+    .para_article{
+      font-size: 16px;
+    }
+  }
+  &Img {
+    margin-bottom: 16px;
+    img {
+      vertical-align: bottom;
+    }
+  }
+  h4 {
+    @include font-bold-24;
+    color: $color-white-0;
+    margin-bottom: 16px;
+  }
+  ol {
+    padding-left: 20px;
+    counter-reset: item;
+    li {
+      @include font-bold-24;
+      color: $color-white-0;
+      margin-bottom: 16px;
+      display: block;
+      position: relative;
+      &::before {
+        content: counters(item, ".") " ";
+        counter-increment: item;
+        position: absolute;
+        left: -30px;
+      }
+      h4 {
+        position: relative;
+        &::before {
+          position: absolute;
+          content: ".";
+          left: -15px;
+        }
+      }
+      ol {
+        padding-left: 0;
+        a {
+          text-decoration: underline;
+          color: #5866f2;
+        }
+      }
+      li {
+        @include font-medium-16;
+        padding-left: 4px;
+        color: $color-white-1;
+      }
+    }
+  }
+  .terms {
+    list-style: devanagari;
+    li {
+      @include font-medium-16;
+      color: $color-white-1;
+      position: relative;
+      &:not(:last-child) {
+        margin-bottom: 16px;
+      }
+    }
+  }
+  ul {
+    padding-left: 16px;
+    li {
+      @include font-medium-16;
+      color: $color-white-0;
+      margin-bottom: 16px;
+    }
+  }
+  @media (min-width: 769px) {
+    .articleWrapper {
+      max-width: 768px;
+      margin: auto;
+    }
+    &Thumbnail {
+      height: 300px;
+      span {
+        height: 100% !important;
+        width: 100% !important;
+      }
+      img {
+        object-fit: cover;
+      }
+    }
+    p {
+      text-align: justify;
+    }
+  }
+}
+
+.videoWrapper {
+  padding: 12px 0;
+}
+.imgArtcl {
+  padding: 12px 0;
+}
+.linkText {
+  a {
+    color: #5866f2;
+    text-decoration: underline;
+    word-break: break-all;
+  }
+}

@@ -1,0 +1,77 @@
+@import '/styles/variables.scss';
+
+.quests {    
+    position: relative;
+    overflow: hidden;    
+    &Details {
+        display: block;
+    }
+    &Know {
+        padding-top: 16px;
+        display: flex;
+        align-items: flex-end;
+        justify-content: space-between;
+    }
+    &KnowText {
+        
+    }
+    &KnowText {
+        p {
+            @include font-regular-20;
+        }
+        h3 {
+            @include font-bold-24;
+        }
+        @media (min-width: 541px) and (max-width: 770px) {
+            h3{
+                font-size: 20px;
+            }
+        }
+    }
+    &Logo {
+        flex-shrink: 0;
+        flex-basis: 17%;
+    }
+    &Title {
+        padding-bottom: 0;
+        p{
+            min-height: 40px;
+        }
+        @media (min-width: 541px) and (max-width: 770px) {
+            min-height: 90px;
+        }
+    }
+    &KnowBtn {
+        background: linear-gradient(270deg, #C86AF5 0%, #3B64BE 100%), #FFFFFF;
+        border-radius: 32px;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        gap: 7px;
+    }
+    &Date {        
+        position: absolute;
+        bottom: 4px;
+        left: 50%;
+        transform: translateX(-50%);
+        display: inline-block;
+        width: 80%;
+        text-align: center;
+        background: #AB04D8;
+        border-radius: 8px 8px 0px 0px;
+        padding: 8px;
+        color: $color-white-0;
+        @include font-regular-12;
+        // @media (min-width:768px){
+        //     bottom: 0;
+        // }
+    }
+    @media (min-width: 541px) and (max-width: 1024px) {
+        width: 48%;
+        &Content {
+            gap: 40px 20px;
+            flex-direction: row;
+            flex-wrap: wrap;
+        }
+    }
+}

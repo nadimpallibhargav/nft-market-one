@@ -1,0 +1,31 @@
+@import '/styles/variables.scss';
+
+.previous {
+    padding: 20px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    background: $color-black-0;
+    .container {
+        padding: 0;
+    }
+    &LinkWrapper {
+        text-align: center;
+        position: relative;
+        max-width: 1440px;
+        margin: auto;
+    }
+    &Link {
+        position: absolute;
+        left: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        cursor: pointer;
+    }
+    span {
+        @include font-medium-16;
+        color: $color-white-0;
+    }
+}
